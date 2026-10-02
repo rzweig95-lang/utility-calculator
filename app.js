@@ -29,33 +29,33 @@ const schedules = {
     gasCustomerCharge: [0, 0, 0, 0, 0, 0, 0]
   },
   acha: {
-    label: "ACHA 2025 · Single Family Detached",
+    label: "ACHA 2026 · Single Family Detached",
     heating: {
-      naturalGas: [52, 69, 95, 117, 142, 166, 175],
-      bottledGas: [124, 166, 229, 281, 343, 399, 422],
-      electric: [84, 114, 159, 196, 240, 281, 297],
-      heatPump: [59, 80, 111, 137, 168, 196, 208],
-      fuelOil: [111, 149, 205, 252, 307, 358, 378]
+      naturalGas: [58, 78, 108, 132, 161, 188, 198],
+      bottledGas: [125, 167, 231, 283, 346, 403, 425],
+      electric: [94, 125, 172, 211, 257, 299, 317],
+      heatPump: [66, 88, 120, 148, 180, 210, 222],
+      fuelOil: [116, 155, 213, 262, 320, 372, 393]
     },
     cooking: {
-      naturalGas: [6, 8, 9, 11, 14, 15, 17],
-      bottledGas: [11, 16, 20, 24, 31, 36, 40],
-      electric: [5, 6, 8, 9, 11, 13, 15]
+      naturalGas: [7, 9, 10, 12, 15, 17, 20],
+      bottledGas: [11, 16, 20, 25, 31, 36, 40],
+      electric: [6, 8, 11, 13, 16, 18, 20]
     },
     waterHeating: {
-      naturalGas: [14, 19, 22, 26, 30, 34, 39],
-      bottledGas: [29, 41, 52, 64, 82, 93, 105],
+      naturalGas: [16, 21, 25, 30, 34, 39, 44],
+      bottledGas: [29, 41, 53, 65, 82, 94, 106],
       electric: [33, 44, 58, 70, 83, 97, 107],
-      fuelOil: [27, 37, 48, 59, 75, 86, 96]
+      fuelOil: [28, 39, 50, 61, 78, 89, 100]
     },
-    otherElectric: [44, 54, 67, 78, 91, 105, 114],
-    airConditioning: [0, 0, 0, 0, 0, 0, 0],
-    water: [22, 29, 57, 82, 106, 131, 155],
-    sewer: [26, 42, 78, 109, 142, 176, 209],
-    trash: [18, 18, 18, 18, 18, 18, 18],
+    otherElectric: [45, 54, 68, 79, 91, 105, 114],
+    airConditioning: [4, 5, 8, 12, 15, 19, 21],
+    water: [23, 31, 60, 86, 111, 137, 163],
+    sewer: [31, 54, 103, 152, 201, 250, 299],
+    trash: [23, 23, 23, 23, 23, 23, 23],
     range: [3, 3, 3, 4, 4, 4, 4],
     refrigerator: [4, 4, 4, 4, 5, 5, 5],
-    gasCustomerCharge: [21, 21, 21, 21, 21, 21, 21]
+    gasCustomerCharge: [24, 24, 24, 24, 24, 24, 24]
   }
 };
 

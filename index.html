@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utility Allowance Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">SECTION 8</p>
+      <h1>Utility Allowance</h1>
+      <p id="schedule-note" class="schedule-note"></p>
+    </header>
+
+    <section class="card basics">
+      <label>
+        Housing authority
+        <select id="authority">
+          <option value="hacp">HACP — City of Pittsburgh</option>
+          <option value="acha">ACHA — Allegheny County</option>
+        </select>
+      </label>
+      <label>
+        Bedrooms
+        <select id="bedrooms">
+          <option value="0">Efficiency</option>
+          <option value="1">1 bedroom</option>
+          <option value="2">2 bedrooms</option>
+          <option value="3" selected>3 bedrooms</option>
+          <option value="4">4 bedrooms</option>
+          <option value="5">5 bedrooms</option>
+          <option value="6">6 bedrooms</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="card lookup-card">
+      <label for="address">Property address</label>
+      <div class="address-row">
+        <input id="address" type="text" placeholder="123 Main St, Pittsburgh, PA" autocomplete="street-address">
+        <button id="lookup" class="primary" type="button">Look up</button>
+      </div>
+      <p id="lookup-status" class="lookup-status">Find the 2026 payment standard and jurisdiction from the county map.</p>
+      <div id="payment-result" class="payment-result" hidden>
+        <div class="result-heading">
+          <span id="result-tier" class="tier-badge"></span>
+          <strong id="result-standard"></strong>
+        </div>
+        <p id="result-location"></p>
+        <div class="rent-math">
+          <div><span>2026 payment standard</span><strong id="math-standard"></strong></div>
+          <div><span>Tenant utility allowance</span><strong id="math-utility"></strong></div>
+          <div class="estimate"><span>Estimated rent after utilities</span><strong id="math-estimate"></strong></div>
+        </div>
+      </div>
+      <a class="map-link" href="https://experience.arcgis.com/experience/2ca82b6eb3e446f78e0632f1ff90c146" target="_blank" rel="noopener">Open the full payment standards map ↗</a>
+    </section>
+
+    <p class="instruction">Select only items paid or supplied by the tenant.</p>
+
+    <section class="card utilities">
+      <label>Heating <select id="heating"></select></label>
+      <label>Cooking <select id="cooking"></select></label>
+      <label>Water heating <select id="waterHeating"></select></label>
+      <label class="check"><input id="otherElectric" type="checkbox"> Other electric (lights and appliances)</label>
+      <label class="check"><input id="airConditioning" type="checkbox"> Air conditioning</label>
+      <label class="check"><input id="water" type="checkbox"> Water</label>
+      <label class="check"><input id="sewer" type="checkbox"> Sewer</label>
+      <label class="check"><input id="trash" type="checkbox"> Trash collection</label>
+      <label class="check"><input id="range" type="checkbox"> Tenant supplies range/microwave</label>
+      <label class="check"><input id="refrigerator" type="checkbox"> Tenant supplies refrigerator</label>
+    </section>
+
+    <section class="total-card" aria-live="polite">
+      <span>Monthly allowance</span>
+      <strong id="total">$0</strong>
+    </section>
+
+    <details>
+      <summary>View calculation</summary>
+      <div id="breakdown"></div>
+    </details>
+
+    <div class="action-buttons">
+      <button id="download-pdf" class="pdf-button" type="button">Download PDF breakdown</button>
+      <button id="reset" class="reset-button" type="button">Reset selections</button>
+    </div>
+    <p class="disclaimer">For estimating only. Confirm the final allowance with the housing authority.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
